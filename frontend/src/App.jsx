@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import API from "./services/api";
+import API, { API_BASE_URL } from "./services/api";
 
 function App() {
   const [videoFile, setVideoFile] = useState(null);
@@ -38,8 +38,8 @@ function App() {
         }
       );
 
-      setVideoUrl(`http://127.0.0.1:8000${response.data.video_url}`);
-      setCsvUrl(`http://127.0.0.1:8000${response.data.csv_url}`);
+      setVideoUrl(`${API_BASE_URL}${response.data.video_url}`);
+      setCsvUrl(`${API_BASE_URL}${response.data.csv_url}`);
     } catch (error) {
       console.error(error);
       alert("Processing failed.");
