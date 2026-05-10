@@ -5,6 +5,32 @@ This project provides an end-to-end solution for analyzing traffic videos. It de
 
 **Live Demo:** [https://traffic-analytics-sigma.vercel.app/](https://traffic-analytics-sigma.vercel.app/)
 
+
+![Project Demo](./frontend/public/demo.png)
+
+---
+
+## System Architecture
+
+```mermaid
+flowchart LR
+    UI["🖥 React Frontend (Vite)"]:::frontend --> API["⚙️ FastAPI Backend"]:::backend
+
+    API --> Detection["🚗 YOLOv8 Detection"]:::service
+    API --> Tracking["🔄 Multi-Object Tracking"]:::service
+    API --> Processing["🎞 FFmpeg Processing"]:::service
+    API --> Storage["📁 Static File Serving"]:::service
+
+    Detection --> Weights["📦 YOLOv8n Weights"]:::storage
+    Tracking --> CSV["📊 Trajectory CSV"]:::storage
+    Processing --> MP4["🎞 Annotated MP4"]:::storage
+
+    classDef frontend fill:#4F46E5,stroke:#4338CA,color:#fff
+    classDef backend  fill:#0F766E,stroke:#0D9488,color:#fff
+    classDef service  fill:#1E293B,stroke:#334155,color:#94A3B8
+    classDef storage  fill:#713F12,stroke:#92400E,color:#FDE68A
+```
+
 ---
 
 ## Technical Approach
