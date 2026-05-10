@@ -38,8 +38,11 @@ function App() {
         }
       );
 
-      setVideoUrl(`${API_BASE_URL}${response.data.video_url}`);
-      setCsvUrl(`${API_BASE_URL}${response.data.csv_url}`);
+      const cleanVideoUrl = response.data.video_url.replace(/^\//, "");
+      const cleanCsvUrl = response.data.csv_url.replace(/^\//, "");
+
+      setVideoUrl(`${API_BASE_URL}/${cleanVideoUrl}`);
+      setCsvUrl(`${API_BASE_URL}/${cleanCsvUrl}`);
     } catch (error) {
       console.error(error);
       alert("Processing failed.");

@@ -1,3 +1,4 @@
+import os
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.staticfiles import StaticFiles
@@ -16,8 +17,12 @@ app.add_middleware(
 
 app.include_router(video_router)
 
+# Ensure the static directory exists and use absolute path
+static_dir = os.path.join(os.getcwd(), "outputs")
+os.makedirs(static_dir, exist_ok=True)
+
 app.mount(
     "/outputs",
-    StaticFiles(directory="outputs"),
+    StaticFiles(directory=static_dir),
     name="outputs"
 )
