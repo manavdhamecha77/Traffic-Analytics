@@ -64,7 +64,7 @@ function App() {
       
       {/* Topbar row */}
       <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', flexShrink: 0 }}>
-        <h1 style={{ fontSize: '48px' }}>Traffic Analytics</h1>
+        <h1 style={{ fontSize: '48px' }}>G-TRISP Traffic Analytics</h1>
       </div>
 
       {/* Two-column content */}
