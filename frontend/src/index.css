@@ -1,0 +1,126 @@
+@import url('https://fonts.googleapis.com/css2?family=Instrument+Serif:ital,wght@0,400;1,400&family=Geist:wght@300;400;500&display=swap');
+
+:root {
+  /* Color Palette */
+  --cream: #faf8f5;
+  --paper: #ffffff;
+  --orange: #e8692a;
+  --orange-soft: #f5e6dc;
+  --orange-mid: #f0c4a8;
+  --ink: #1a1612;
+  --ink-2: #6b6560;
+  --ink-3: #b5b0ab;
+  --ruler: rgba(26, 22, 18, 0.08);
+
+  /* Status Colors */
+  --status-green: #22c55e;
+  --status-red: #dc2626;
+
+  /* Severity - Medium */
+  --medium-text: #1d4ed8;
+  --medium-bg: #eff6ff;
+  --medium-border: #bfdbfe;
+
+  /* Typography */
+  --font-serif: 'Instrument Serif', serif;
+  --font-sans: 'Geist', sans-serif;
+
+  background-color: var(--cream);
+  color: var(--ink-2);
+  font-family: var(--font-sans);
+  font-size: 14px;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+}
+
+#root {
+  padding-top: 96px;
+  padding-left: 24px;
+  padding-right: 24px;
+  box-sizing: border-box;
+}
+
+h1, h2, h3, .kpi-value {
+  font-family: var(--font-serif);
+  color: var(--ink);
+  font-weight: 400;
+  margin: 0;
+}
+
+h1 {
+  font-size: 28px;
+  letter-spacing: -0.02em;
+}
+
+h2 {
+  font-size: 20px;
+  letter-spacing: -0.02em;
+}
+
+.kpi-value {
+  font-size: 24px;
+  letter-spacing: -0.02em;
+}
+
+.section-title {
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--ink-3);
+}
+
+.small-label {
+  font-size: 12px;
+  color: var(--ink-2);
+}
+
+.micro-label {
+  font-size: 11px;
+  color: var(--ink-3);
+}
+
+button {
+  background-color: var(--orange);
+  color: var(--paper);
+  border: none;
+  border-radius: 4px;
+  padding: 8px 16px;
+  font-family: var(--font-sans);
+  font-weight: 500;
+  cursor: pointer;
+  transition: opacity 0.2s;
+}
+
+button:hover {
+  opacity: 0.9;
+}
+
+button:disabled {
+  background-color: var(--ink-3);
+  cursor: not-allowed;
+}
+
+input[type="number"], input[type="file"] {
+  border: 1px solid var(--ruler);
+  border-radius: 4px;
+  padding: 8px;
+  font-family: var(--font-sans);
+  font-size: 14px;
+  color: var(--ink);
+  background: var(--paper);
+}
+
+.card {
+  background: var(--paper);
+  border: 1px solid var(--ruler);
+  border-radius: 8px;
+  padding: 16px;
+}
