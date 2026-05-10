@@ -1,0 +1,10 @@
+ultralytics
+supervision
+opencv-python
+pandas
+numpy
+ipykernel
+lap>=0.5.12
+fastapi
+uvicorn
+python-multipart
