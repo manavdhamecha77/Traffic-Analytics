@@ -1,0 +1,7 @@
+# Root ignore patterns
+outputs/
+data/
+*.avi
+*.mp4
+*.csv
+.DS_Store

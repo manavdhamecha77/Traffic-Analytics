@@ -1,0 +1,5 @@
+# Ignore models specifically in the notebooks folder
+*.pt
+*.pth
+model.txt
+.ipynb_checkpoints/
